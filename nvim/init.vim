@@ -51,7 +51,6 @@ let g:deoplete#enable_at_startup = 1
 
 " https://stackoverflow.com/questions/14658600/what-is-the-vim-command-to-quit-all-open-windows?rq=1
 " Terminal
-se splitdown
 autocmd VimEnter * terminal
 se splitright
 autocmd VimEnter * NERDTree
