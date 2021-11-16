@@ -1,0 +1,1 @@
+bare-neovim-config
