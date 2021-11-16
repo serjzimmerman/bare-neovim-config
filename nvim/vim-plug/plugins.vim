@@ -14,4 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'scrooloose/nerdtree',
   Plug 'sbdchd/neoformat',
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' },
+  Plug 'itchyny/lightline.vim',
+  Plug 'Pocco81/AutoSave.nvim',
+  Plug 'morhetz/gruvbox',
 call plug#end()

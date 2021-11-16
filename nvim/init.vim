@@ -29,9 +29,6 @@ se ttyfast
 
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
-" Set vscode dark theme
-colorscheme codedark
-
 " Pane movement
 " move split panes to left/bottom/top/right
 nnoremap <A-h> <C-W>H
@@ -58,3 +55,29 @@ se splitdown
 autocmd VimEnter * terminal
 se splitright
 autocmd VimEnter * NERDTree
+
+" autosave plugin
+lua << EOF
+local autosave = require("autosave")
+
+autosave.setup(
+    {
+        enabled = true,
+        execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
+        events = {"InsertLeave", "TextChanged"},
+        conditions = {
+            exists = true,
+            filename_is_not = {},
+            filetype_is_not = {},
+            modifiable = true
+        },
+        write_all_buffers = false,
+        on_off_commands = true,
+        clean_command_line_interval = 0,
+        debounce_delay = 135
+    }
+)
+EOF
+
+" https://github.com/morhetz/gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
