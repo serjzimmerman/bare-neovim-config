@@ -14,5 +14,4 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'scrooloose/nerdtree',
   Plug 'sbdchd/neoformat',
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' },
-  Plug 'zchee/deoplete-clang',
 call plug#end()
