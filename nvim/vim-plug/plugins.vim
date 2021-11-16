@@ -12,8 +12,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tomasiser/vim-code-dark',
   Plug 'mhinz/vim-startify',
   Plug 'scrooloose/nerdtree',
-  Plug 'ms-jpq/coq_nvim',
-  Plug 'Olical/aniseed',
-  Plug 'jlesquembre/nterm.nvim', 
-  Plug 'akinsho/toggleterm.nvim',
+  Plug 'sbdchd/neoformat',
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' },
+  Plug 'zchee/deoplete-clang',
 call plug#end()
