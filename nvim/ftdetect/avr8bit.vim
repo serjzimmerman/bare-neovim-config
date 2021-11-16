@@ -1,2 +1,2 @@
-au BufRead,BufNewFile *.asm set filetype=avr8bit
+autocmd BufRead,BufNewFile *.asm,*.inc set filetype=avr8bit
 
