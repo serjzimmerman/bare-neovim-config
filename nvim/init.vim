@@ -30,12 +30,12 @@ se ttyfast
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
 " Pane movement
-" move split panes to left/bottom/top/right
+" Move split panes to left/bottom/top/right
 nnoremap <A-h> <C-W>H
 nnoremap <A-j> <C-W>J
 nnoremap <A-k> <C-W>K
 nnoremap <A-l> <C-W>L
-" move between panes to left/bottom/top/right
+" Move between panes to left/bottom/top/right
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -55,7 +55,7 @@ autocmd VimEnter * terminal
 se splitright
 autocmd VimEnter * NERDTree
 
-" autosave plugin
+" Autosave plugin
 lua << EOF
 local autosave = require("autosave")
 
@@ -80,3 +80,11 @@ EOF
 
 " https://github.com/morhetz/gruvbox
 autocmd vimenter * ++nested colorscheme gruvbox
+
+" Clang-format
+let g:neoformat_cpp_clangformat = {
+    \ 'exe': 'clang-format',
+    \ 'args': ['--style="{BasedOnStyle: LLVM, IndentWidth: 2, }"']
+\}
+let g:neoformat_enabled_cpp = ['clang-format']
+let g:neoformat_enabled_c = ['clang-format']
